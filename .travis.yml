@@ -7,6 +7,7 @@ matrix:
       sudo: required
     - os: osx
       osx_image: xcode11.5
+      sudo: required
 
 
 before_script:
@@ -14,4 +15,4 @@ before_script:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install cmake gcc g++; fi
 
 script:
-  - ./gen_lib.sh
+  - . ./gen_lib.sh
