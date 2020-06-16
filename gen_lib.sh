@@ -6,9 +6,10 @@ cd SVF
 
 if [[ $sysOS == "Darwin" ]]
 then
-#  tar -cvf svf-lib_mac.tar.gz
   echo $PWD
+  ls
 elif [[ $sysOS == "Linux" ]]
 then
   echo $PWD
+  ls
 fi
