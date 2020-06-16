@@ -5,14 +5,15 @@ matrix:
     - os: linux
       dist: bionic
       sudo: required
-#      before_install:
-#        - git clone https://github.com/charles32110/autogen_svf_lib.git
+      before_install:
+        - git clone https://github.com/charles32110/autogen_svf_lib.git
+        - cd autogen_svf_lib
     - os: osx
       osx_image: xcode11.5
       sudo: required
-#      before_install:
-#        - git clone https://github.com/charles32110/autogen_svf_lib.git
-
+      before_install:
+        - git clone https://github.com/charles32110/autogen_svf_lib.git
+        - cd autogen_svf_lib
 
 before_script:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update       ; fi
@@ -20,3 +21,4 @@ before_script:
 
 script:
   - . ./gen_lib.sh
+  - ls
