@@ -6,10 +6,17 @@ cd SVF
 
 if [[ $sysOS == "Darwin" ]]
 then
-  echo $PWD
-  ls
+ tar -cvf /home/travis/build/charles32110/autogen_svf_lib/svflib_mac.tar.gz lib/libsvf_mac.a lib/CUDD/libCudd.a
+  cd /home/travis/build/charles32110/autogen_svf_lib
+  git add svflib_mac.tar.gz
+  git commit -m "new_version"
+  git push
 elif [[ $sysOS == "Linux" ]]
 then
-  echo $PWD
-  ls
+  tar -cvf /home/travis/build/charles32110/autogen_svf_lib/svflib_ubuntu.tar.gz lib/libsvf_ubuntu.a lib/CUDD/libCudd.a
+  cd /home/travis/build/charles32110/autogen_svf_lib
+  git add svflib_ubuntu.tar.gz
+  git commit -m "new_version"
+  git push
 fi
+
