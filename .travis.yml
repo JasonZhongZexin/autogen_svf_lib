@@ -21,7 +21,7 @@ script:
 
 before_deploy:
   - cd /home/travis/build/charles32110/autogen_svf_lib
-  - ./gen_lib.sh
+  - . ./gen_lib.sh
 
 deploy:
   provider: releases
