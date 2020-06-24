@@ -20,7 +20,7 @@ script:
   - . ./build.sh
 
 before_deploy:
-  - cd ..
+  - PWD
   - . ./gen_lib.sh
 
 deploy:
