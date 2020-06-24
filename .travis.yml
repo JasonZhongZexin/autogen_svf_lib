@@ -20,7 +20,7 @@ script:
   - . ./build.sh
 
 before_deploy:
-  - PWD
+  - $PWD
   - . ./gen_lib.sh
 
 deploy:
