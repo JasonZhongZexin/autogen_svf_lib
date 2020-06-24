@@ -5,20 +5,29 @@ matrix:
     - os: linux
       dist: bionic
       sudo: required
-      before_install:
-        - git clone https://github.com/charles32110/autogen_svf_lib.git
-        - cd autogen_svf_lib
     - os: osx
       osx_image: xcode11.5
       sudo: required
       before_install:
-        - git clone https://github.com/charles32110/autogen_svf_lib.git
-        - cd autogen_svf_lib
 
 before_script:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update       ; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install cmake gcc g++; fi
 
 script:
-  - . ./gen_lib.sh
-  - ls
+  - git clone https://github.com/SVF-tools/SVF.git
+  - cd SVF
+  - . ./build.sh
+
+before_deploy:
+  - ./gen_lib.sh
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  file: "/home/travis/build/charles32110/autogen_svf_lib/autogen_svf_lib/*.tar.gz"
+  api_key:
+    secure: "$API_KEY"
+  on:
+    tags: true #发布  tag版 时才进行发包   
+    draft: false # 不发表drafs
