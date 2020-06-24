@@ -20,6 +20,7 @@ script:
   - . ./build.sh
 
 before_deploy:
+  - cd /home/travis/build/charles32110/autogen_svf_lib
   - ./gen_lib.sh
 
 deploy:
@@ -29,5 +30,5 @@ deploy:
   api_key:
     secure: "$API_KEY"
   on:
-    tags: true #发布  tag版 时才进行发包   
-    draft: false # 不发表drafs
+    tags: true   
+    draft: false 
