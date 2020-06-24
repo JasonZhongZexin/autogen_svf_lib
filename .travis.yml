@@ -20,13 +20,13 @@ script:
   - . ./build.sh
 
 before_deploy:
-  - cd /home/travis/build/charles32110/autogen_svf_lib
+  - cd ..
   - . ./gen_lib.sh
 
 deploy:
   provider: releases
   skip_cleanup: true
-  file: "/home/travis/build/charles32110/autogen_svf_lib/autogen_svf_lib/*.tar.gz"
+  file: "/home/travis/build/charles32110/autogen_svf_lib/*.tar.gz"
   api_key:
     secure: "$API_KEY"
   on:
