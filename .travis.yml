@@ -18,14 +18,14 @@ script:
   - git clone https://github.com/SVF-tools/SVF.git
   - cd SVF
   - . ./build.sh
-  - cd ..
+  - cd $TRAVIS_BUILD_DIR
   - ls
   - . ./gen_lib.sh
 
 deploy:
   provider: releases
   skip_cleanup: true
-  file: "/home/travis/build/charles32110/autogen_svf_lib/*.tar.gz"
+  file: "$TRAVIS_BUILD_DIR/*.tar.gz"
   api_key:
     secure: "$API_KEY"
   on:
