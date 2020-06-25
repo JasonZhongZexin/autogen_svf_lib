@@ -1,11 +1,11 @@
 # bash!
 sysOS=`uname -s`
-pwd
+path=$(pwd)
 if [[ $sysOS == "Darwin" ]]
 then
- tar -cvf $PWD/svflib.tar.gz $PWD/SVF/Release-build/lib/libSvf.a $PWD/SVF/Release-build/lib/CUDD/libCudd.a
+ tar -cvf $path/svflib.tar.gz -C $path/SVF/Release-build/lib/libSvf.a $path/SVF/Release-build/lib/CUDD/libCudd.a
 elif [[ $sysOS == "Linux" ]]
 then
-  tar -cvf $PWD/svflib.tar.gz $PWD/SVF/Release-build/lib/libSvf.a $PWD/SVF/Release-build/lib/CUDD/libCudd.a
+  tar -cvf $PWD/svflib.tar.gz -C $path/SVF/Release-build/lib/libSvf.a $path/SVF/Release-build/lib/CUDD/libCudd.a
 fi
 ls
