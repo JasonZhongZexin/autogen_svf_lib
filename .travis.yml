@@ -25,7 +25,7 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  file: $TRAVIS_BUILD_DIR/*.tar.gz
+  file: $TRAVIS_BUILD_DIR/*.gz
   api_key: ${API_KEY}
   on:
     tags: true  
