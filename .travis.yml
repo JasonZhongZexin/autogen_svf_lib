@@ -25,7 +25,9 @@ script:
 deploy:
   provider: releases
   skip_cleanup: true
-  file: $TRAVIS_BUILD_DIR/svflib.tar.gz
+  file: 
+    - svflib_mac.tar.gz
+    - svflib_ubuntu.tar.gz
   api_key: ${API_KEY}
   on:
     tags: true  
