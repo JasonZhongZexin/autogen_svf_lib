@@ -5,6 +5,7 @@ matrix:
     - os: linux
       dist: bionic
       sudo: required
+
     - os: osx
       osx_image: xcode11.5
       sudo: required
@@ -22,12 +23,12 @@ script:
   - ls
   - . ./gen_lib.sh
 
-deploy:
-  provider: releases
-  skip_cleanup: true
-  file: 
-    - svflib_mac.tar.gz
-    - svflib_ubuntu.tar.gz
-  api_key: ${API_KEY}
-  on:
-    tags: true  
+  deploy:
+    provider: releases
+    skip_cleanup: true
+    file: 
+      - svflib_mac.tar.gz
+      - svflib_ubuntu.tar.gz
+    api_key: ${API_KEY}
+    on:
+      tags: true  
