@@ -23,6 +23,9 @@ script:
   - . ./gen_lib.sh
   - git clone https://github.com/SVF-tools/SVF-npm.git
   - ls
+  - mv libSvf.a /SVF-npm/mac/libSvf.a
+  - cd SVF-npm
+  - ls
 
 deploy:
   provider: releases
