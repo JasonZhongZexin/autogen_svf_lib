@@ -19,7 +19,7 @@ then
   cp ./SVF/Release-build/lib/libSvf.a libSvf_ubuntu.a
   cp ./SVF/Release-build/lib/CUDD/libCudd.a libCudd_ubuntu.a
   cp ./libSvf_ubuntu.a ./SVF-npm/Release-build/lib
-  cp ./libCudd_ubuntu.a ./SVF-npm/Release-build/libb
+  cp ./libCudd_ubuntu.a ./SVF-npm/Release-build/lib
   cd SVF-npm
   git status
   git add .
