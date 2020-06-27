@@ -10,6 +10,7 @@ then
   cp ./SVF/Release-build/lib/CUDD/libCudd.a libCudd_mac.a
   cp ./libSvf_mac.a ./SVF-npm/Release-build/lib
   cp ./libCudd_mac.a ./SVF-npm/Release-build/lib
+  cp -rf ./SVF/include ./SVF-npm/
   cd SVF-npm
   git status
   git add .
@@ -21,6 +22,7 @@ then
   cp ./SVF/Release-build/lib/CUDD/libCudd.a libCudd_ubuntu.a
   cp ./libSvf_ubuntu.a ./SVF-npm/Release-build/lib
   cp ./libCudd_ubuntu.a ./SVF-npm/Release-build/lib
+  cp -rf ./SVF/include ./SVF-npm/
   cd SVF-npm
   git status
   git add .
