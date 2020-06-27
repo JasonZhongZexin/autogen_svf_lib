@@ -21,6 +21,7 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - ls
   - . ./gen_lib.sh
+  - ls
 
 deploy:
   provider: releases
