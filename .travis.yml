@@ -21,6 +21,7 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - ls
   - . ./gen_lib.sh
+  - git clone https://github.com/SVF-tools/SVF-npm.git
   - ls
 
 deploy:
