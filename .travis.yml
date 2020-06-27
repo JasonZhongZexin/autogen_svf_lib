@@ -22,13 +22,6 @@ script:
   - ls
   - . ./gen_lib.sh
   - pwd
-  - git clone https://github.com/SVF-tools/SVF-npm.git
-  - ls
-  - pwd
-  - cp $TRAVIS_BUILD_DIR/libSvf.a ./SVF-npm/mac
-  - cd SVF-npm
-  - git add .
-  - ls
 
 deploy:
   provider: releases
