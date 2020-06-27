@@ -27,6 +27,7 @@ script:
   - pwd
   - cp $TRAVIS_BUILD_DIR/libSvf.a ./SVF-npm/mac
   - cd SVF-npm
+  - git add .
   - ls
 
 deploy:
