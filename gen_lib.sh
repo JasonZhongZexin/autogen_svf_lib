@@ -11,6 +11,7 @@ then
   cp ./libSvf_mac.a ./SVF-npm/Release-build/lib
   cp ./libCudd_mac.a ./SVF-npm/Release-build/lib
   cd SVF-npm
+  git status
   git add .
   git status
 elif [[ $sysOS == "Linux" ]]
@@ -20,6 +21,7 @@ then
   cp ./libSvf_ubuntu.a ./SVF-npm/Release-build/lib
   cp ./libCudd_ubuntu.a ./SVF-npm/Release-build/libb
   cd SVF-npm
+  git status
   git add .
   git status
 fi
