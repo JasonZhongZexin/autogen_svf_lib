@@ -13,6 +13,7 @@ then
   cd SVF-npm
   git status
   git add .
+  git commit -m'update svflib'
   git status
 elif [[ $sysOS == "Linux" ]]
 then
@@ -23,6 +24,7 @@ then
   cd SVF-npm
   git status
   git add .
+  git commit -m'update svflib'
   git status
 fi
 ls
