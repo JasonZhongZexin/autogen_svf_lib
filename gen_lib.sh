@@ -3,7 +3,7 @@ sysOS=`uname -s`
 pwd
 home=$pwd
 echo $home
-git clone https://github.com/SVF-tools/SVF-npm.git
+git clone https://github.com/JasonZhongZexin/SVF-npm.git
 if [[ $sysOS == "Darwin" ]]
 then
   cp ./SVF/Release-build/lib/libSvf.a libSvf_mac.a

@@ -23,7 +23,7 @@ script:
   - . ./gen_lib.sh
   - pwd
   - cd $TRAVIS_BUILD_DIR/SVF-npm
-  - git push https://JasonZhongZexin:${git_key}@https://github.com/SVF-tools/SVF-npm.git HEAD:master
+  - git push https://JasonZhongZexin:${git_key}@https://github.com/JasonZhongZexin/SVF-npm.git HEAD:master
 
 deploy:
   provider: releases
