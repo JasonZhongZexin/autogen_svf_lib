@@ -23,7 +23,7 @@ script:
   - . ./gen_lib.sh
   - git clone https://github.com/SVF-tools/SVF-npm.git
   - ls
-  - mv libSvf.a /SVF-npm/mac/libSvf.a
+  - mv libSvf.a /SVF-npm/mac
   - cd SVF-npm
   - ls
 
