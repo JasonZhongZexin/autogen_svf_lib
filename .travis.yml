@@ -28,6 +28,6 @@ deploy:
   file: 
     - svflib_mac.tar.gz
     - svflib_ubuntu.tar.gz
-  api_key: ${API_KEY}
+  api_key: ${git_key}
   on:
     tags: true  
