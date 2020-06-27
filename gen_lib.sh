@@ -1,7 +1,7 @@
 # bash!
 sysOS=`uname -s`
 pwd
-home=pwd
+home=$pwd
 git clone https://github.com/SVF-tools/SVF-npm.git
 if [[ $sysOS == "Darwin" ]]
 then
