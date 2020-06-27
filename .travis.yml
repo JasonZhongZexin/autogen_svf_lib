@@ -21,9 +21,11 @@ script:
   - cd $TRAVIS_BUILD_DIR
   - ls
   - . ./gen_lib.sh
+  - pwd
   - git clone https://github.com/SVF-tools/SVF-npm.git
   - ls
-  - mv libSvf.a /SVF-npm/mac
+  - pwd
+  - mv $TRAVIS_BUILD_DIR/libSvf.a /SVF-npm/
   - cd SVF-npm
   - ls
 
